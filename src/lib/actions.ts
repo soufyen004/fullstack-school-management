@@ -279,7 +279,7 @@ export const createStudent = async (
     // console.log("data:",data)
     await prisma.student.create({
       data: {
-        id: user.id,
+        id: `${user?.id}`,
         username: data.username,
         name: data.name,
         surname: data.surname,
